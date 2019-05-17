@@ -1,0 +1,58 @@
+---
+name: Switch
+---
+
+import { Playground } from 'docz'
+import Switch from './index'
+
+# Switch
+#### This component provides the user a choice between two options
+
+## Demo: without content
+
+<Playground>
+  <Switch/>
+</Playground>
+
+## Demo: with options
+
+<Playground>
+  <Switch options={['left', 'right']}/>
+</Playground>
+
+## Demo: with options and position
+
+<Playground>
+  <Switch
+    options={['left', 'right']}
+    position="right"/>
+</Playground>
+
+## Demo: with options, position and click
+
+<Playground>
+  <Switch
+    options={['left', 'right']}
+    position="right"
+    onClick={() => { console.log('clicked') }}/>
+</Playground>
+
+## Demo: with options, position, and click (disabled)
+
+<Playground>
+  <Switch
+    disabled={true}
+    options={['left', 'right']}
+    position="right"
+    onClick={() => { console.log('clicked') }}/>
+</Playground>
+
+## Properties
+
+<!-- https://www.tablesgenerator.com/markdown_tables -->
+| PROPERTY 	|   TYPE   	| REQUIRED 	| DESCRIPTION                     	|
+|:--------:	|:--------:	|:--------:	|---------------------------------	|
+| disabled 	|  `bool`  	|    NO    	| Disable interaction with Switch 	|
+|  options 	|  `array` 	|    NO    	| Array of strings                	|
+| position 	| `string` 	|    NO    	| `left` or `right`               	|
+|  onClick 	|  `func`  	|    NO    	| Called onClick                  	|
